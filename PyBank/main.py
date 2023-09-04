@@ -65,15 +65,14 @@ with open(csvpath) as csvfile:
     #Calculating the average change and using round function to round answer to 2 decimal places 
     average_change = round((monthly_change)/(total_months-1), 2)
 
-    #determining the greatest increase in profits from the monthly change list
-    Greatest_increase = max(monthy_change_list)
-    print(Greatest_increase)
-    #determining the greatest decrease in profits from the monthly change list
-    Greatest_decrease = min(monthy_change_list)
-    print(Greatest_decrease)
-
-
-        
+    #Loops through the profits chane list based on the length of the list 
+    for i in range(len(monthy_change_list)): 
+        #Determines the index value/month where the greatest increase in profit occured
+        if monthy_change_list[i] == max(monthy_change_list):
+            Max_Bingo = i+1
+        #Determines the index value/month where the greatest decrease in profit occured
+        elif monthy_change_list[i] == min(monthy_change_list):
+            Min_bingo = i+1
 
     #Prints the total number of months included in the dataset
     print(f"Total months: {total_months}")
@@ -81,19 +80,25 @@ with open(csvpath) as csvfile:
     print(f"Total: {net_profit}")
     #Prints the Average profit/loss change 
     print(f"Average Change: {average_change}")
+    #The greatest increase in profits (date and amount) over the entire period
+    print(f"Greatest Increase in Profits: {date[Max_Bingo]} ({max(monthy_change_list)})")
+    #The greatest decrease in profits (date and amount) over the entire period
+    print(f"Greatest Decrease in Profits: {date[Min_bingo]} ({min(monthy_change_list)})")
 
-    
-    
-    
+#Setting output file path
+file_output_path = os.path.join('Analysis', 'budget_analysis.txt')
 
-    
-
-    
-
-    
-
-
-
-        
-
-    
+#Output Summary 
+output = (
+    f"Financial Analysis\n"
+    f"-------------------\n"
+    f"Total months: {total_months}\n"
+    f"Total: {net_profit}\n"
+    f"Average Change: {average_change}\n"
+    f"Greatest Increase in Profits: {date[Max_Bingo]} ({max(monthy_change_list)})\n"
+    f"Greatest Decrease in Profits: {date[Min_bingo]} ({min(monthy_change_list)})\n"
+    )
+     
+#Export text file 
+with open(file_output_path, "w") as txt_file:
+    txt_file.write(output)
