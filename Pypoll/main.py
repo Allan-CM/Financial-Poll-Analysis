@@ -18,6 +18,7 @@ data = {
 results ={}
 
 vote = 0
+max_votes = 0
 
 #Telling program to read csv
 with open(csvpath) as csvfile:
@@ -42,27 +43,62 @@ for candidate in data["Candidate"]:
     if candidate in results:
         results[candidate]["Votes"] += 1
     elif candidate not in results: 
-        results[candidate] = {"Percentage": 0, "Votes": (1)}
+        results[candidate] = {"Percentage": 0, "Votes": 1}
      
-print(results)
 #Counting Number of Ballots/Votes 
 total = 0 
 total = [total + 1 for i in range(len(data['BalltonID']))]
 
-results["Charles Casper Stockham"]["Percentage"] = round((results["Charles Casper Stockham"]["Votes"] / sum(total) * 100), 3)
-results["Diana DeGette"]["Percentage"] = round((results["Diana DeGette"]["Votes"] / sum(total) * 100), 3)
-results["Raymon Anthony Doane"]["Percentage"] = round((results["Raymon Anthony Doane"]["Votes"] / sum(total) * 100), 3)
+for key in results:
+    results[key]["Percentage"] = round((results[key]["Votes"] / sum(total) * 100), 3)
 
+for key, value in results.items():
+    if max_votes > results[key]["Votes"]: 
+        max_votes = max_votes
+    elif max_votes < results[key]["Votes"]: 
+        max_votes = results[key]["Votes"]
 
-print(results)
-
+for key, value in results.items():
+    if results[key]["Votes"] == max_votes:  
+        winner = key
+    
 #Print Election Result 
 print("Election Result")
 
 print("-------------------")
 
 #Prints total number of votes cast 
-print(f"Total months: {sum(total)}")
+print(f"Total Votes: {sum(total)}")
 
 print("-------------------")
 
+for key,value in results.items():
+    print(f"{key}: {results[key]['Percentage']}% ({results[key]['Votes']})")
+
+print("-------------------")
+
+print(f"Winner: {winner}")
+
+#Setting output file path
+file_output_path = os.path.join('Analysis', 'election_results.txt')
+
+#Output Summary 
+output = (
+    f"Election Result\n"
+    f"-------------------\n"
+    f"Total Votes: {sum(total)}\n"
+    f"-------------------\n"
+    )
+
+for key, value in results.items():
+    # Write the formatted output to the file
+    output += (f"{key}: {results[key]['Percentage']}% ({results[key]['Votes']})\n")
+
+output += (
+    f"-------------------\n"
+    f"Winner: {winner}"      
+    )
+
+#Export text file 
+with open(file_output_path, "w") as txt_file:
+    txt_file.write(output)
