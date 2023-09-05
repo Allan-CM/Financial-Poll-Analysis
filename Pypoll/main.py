@@ -35,27 +35,26 @@ with open(csvpath) as csvfile:
         data["County"].append(row[1])
         data["Candidate"].append(row[2])
 
+total = 0 
+total = [total + 1 for i in range(len(data['BalltonID']))]
+
 for candidate in data["Candidate"]:
     if candidate in results:
         results[candidate]["Votes"] += 1
     elif candidate not in results: 
-        results[candidate] = {"Percentage": 0, "Votes": 1}
-
-
-
-
-       
-
+        results[candidate] = {"Percentage": 0, "Votes": (1)}
+     
 print(results)
 #Counting Number of Ballots/Votes 
 total = 0 
 total = [total + 1 for i in range(len(data['BalltonID']))]
 
-a = results["Charles Casper Stockham"]
-Charles_Vote_Percentage = round((results["Charles Casper Stockham"]["Votes"] / sum(total) * 100), 3)
+results["Charles Casper Stockham"]["Percentage"] = round((results["Charles Casper Stockham"]["Votes"] / sum(total) * 100), 3)
+results["Diana DeGette"]["Percentage"] = round((results["Diana DeGette"]["Votes"] / sum(total) * 100), 3)
+results["Raymon Anthony Doane"]["Percentage"] = round((results["Raymon Anthony Doane"]["Votes"] / sum(total) * 100), 3)
 
 
-print(Charles_Vote_Percentage)
+print(results)
 
 #Print Election Result 
 print("Election Result")
