@@ -17,8 +17,6 @@ data = {
 #Initiailzing Empty dictonary
 results ={}
 
-#Initializing Variable to count number of votes
-vote = 0
 #Initializing variable to determin maximum number of votes 
 max_votes = 0
 
