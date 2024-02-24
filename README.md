@@ -10,8 +10,9 @@ my skills in using python for loops, conditional statements, and dictonaries.
 
 ## Understanding the project
 * The PyBank Folder contains the python script for the finanical analysis and the dataset used for this anaylsis
-  * [Result-Finanical](https://github.com/Allan-CM/Financial-Poll-Analysis/blob/main/Pypoll/Analysis/election_results.txt)
-  * 
+  * [Result-Finanical](https://github.com/Allan-CM/Financial-Poll-Analysis/blob/main/PyBank/Analysis/budget_analysis.txt)
+ * The PyPoll Folder contains the python script for the electoral poll data and the dataset used for this anaylsis
+  * [Electoral-Data-Analysis](https://github.com/Allan-CM/Financial-Poll-Analysis/blob/main/Pypoll/Analysis/election_results.txt)
 
 PyBank Folder: 
 1. Analysis folder --> Contains txt output of my python script result
