@@ -6,6 +6,7 @@ my skills in using python for loops, conditional statements, and dictonaries.
 
 ## Built Using 
 ![Python](https://img.shields.io/badge/Python-3.10.12-yellow)
+![VSC](https://img.shields.io/badge/VSC-blue)
 
 PyBank Folder: 
 1. Analysis folder --> Contains txt output of my python script result
