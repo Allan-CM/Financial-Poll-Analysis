@@ -11,19 +11,11 @@ my skills in using python for loops, conditional statements, and dictonaries.
 ## Understanding the project
 * The PyBank Folder contains the python script for the finanical analysis and the dataset used for this anaylsis
   * [Result-Finanical](https://github.com/Allan-CM/Financial-Poll-Analysis/blob/main/PyBank/Analysis/budget_analysis.txt)
- * The PyPoll Folder contains the python script for the electoral poll data and the dataset used for this anaylsis
+* The PyPoll Folder contains the python script for the electoral poll data and the dataset used for this anaylsis
   * [Electoral-Data-Analysis](https://github.com/Allan-CM/Financial-Poll-Analysis/blob/main/Pypoll/Analysis/election_results.txt)
 
-PyBank Folder: 
-1. Analysis folder --> Contains txt output of my python script result
-2. Resources folder --> Contains the csv file from which the data was acquired
-3. Main.py --> contians the python script for the finanical analysis portion of this assignement
+## Author COntact 
+Allan Mathews - allancmathews@gmail.com
 
-PyPoll Folder: 
-1. Analysis folder --> Contains txt output of my python script result
-2. Resources folder --> Contains the csv file from which the data was acquired
-3. Main.py --> contians the python script for the election result analysis portion of this assignement  
-
-Credits: 
-https://www.geeksforgeeks.org/python-dictionary-items-method/ --? thaugh me what dict.items() does and how I can used it 
-The output command for the txt file in both my python scripts wre created with the assistance of the AskBCS chat support agents on slack 
+## Credits 
+* [Resource for using dict.item function](https://www.geeksforgeeks.org/python-dictionary-items-method)
