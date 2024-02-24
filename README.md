@@ -9,8 +9,8 @@ my skills in using python for loops, conditional statements, and dictonaries.
 ![VSC](https://img.shields.io/badge/VSC-blue)
 
 ## Understanding the project
-* The PyBank Folder contains the python script for the finanical analysis and the dataset sued for this anaylsis
-  * ![Result-Finanical](https://github.com/Allan-CM/Financial-Poll-Analysis/blob/main/Pypoll/Analysis/election_results.txt)
+* The PyBank Folder contains the python script for the finanical analysis and the dataset used for this anaylsis
+  * [Result-Finanical](https://github.com/Allan-CM/Financial-Poll-Analysis/blob/main/Pypoll/Analysis/election_results.txt)
   * 
 
 PyBank Folder: 
