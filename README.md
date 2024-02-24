@@ -1,6 +1,11 @@
-# python-challenge
-This is my bootcamp assignment 3, Python challenge.
-This project uses the skills that I learnt as part of Module 3 to analyze finanical and election data.
+# Financial Insights & Electoral Trends: Analyzing Company Records and Poll Counts
+
+## About Project
+For this project I chose to anaylse finanical records of a unknown company and the electoral poll data of a random rural town to showcase
+my skills in using python for loops, conditional statements, and dictonaries.
+
+## Built Using 
+![Python](https://img.shields.io/badge/Python-3.10.12-yellow)
 
 PyBank Folder: 
 1. Analysis folder --> Contains txt output of my python script result
